@@ -1,5 +1,5 @@
-
-import "./"
+import React from "react";
+import "./global.css"
 
 export const metadata = {
     title:"F1GPT",

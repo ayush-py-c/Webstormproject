@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: f1gpt-app
+    runtime: node
+    repo: https://github.com/ayush-py-c/Webstormproject
+    branch: main
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: ASTRA_DB_NAMESPACE
+        value: your_namespace_here
+      - key: ASTRA_DB_COLLECTION
+        value: your_collection_here
+      - key: ASTRA_DB_API_ENDPOINT
+        value: your_api_endpoint_here
+      - key: ASTRA_DB_APPLICATION_TOKEN
+        value: your_application_token_here
+      - key: OPENAI_API_KEY
+        value: your_openai_key_here
+    autoDeploy: true
